@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>Flex 動畫教學</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .row {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .box {
+      padding: 20px;
+      text-align: center;
+      border: 2px solid gray;
+      margin: 5px;
+      font-weight: bold;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 0.6s forwards;
+      transition: transform 0.3s;
+    }
+
+    /* hover 放大 */
+    .box:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    /* 依序進場 */
+    .item-1  { animation-delay: 0.2s; }
+    .item-2  { animation-delay: 0.4s; }
+    .item-3  { animation-delay: 0.6s; }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* FLEX 設定 */
+    .default  { flex: 0 1 auto;  background: #f0f0f0; }
+    .flex1    { flex: 1;        background: #cfe2ff; }
+    .flex2    { flex: 2;        background: #d1e7dd; }
+  </style>
+</head>
+<body>
+
+  <h2>Flex Default（flex: 0 1 auto）</h2>
+  <div class="row">
+    <div class="box default item-1">default</div>
+    <div class="box default item-2">default</div>
+    <div class="box default item-3">default</div>
+  </div>
+
+  <h2>Add flex: 1（Evenly Separate）</h2>
+  <div class="row">
+    <div class="box flex1 item-1">flex: 1</div>
+    <div class="box flex1 item-2">flex: 1</div>
+    <div class="box flex1 item-3">flex: 1</div>
+  </div>
+
+  <h2>Different Value（flex: 1 vs flex: 2）</h2>
+  <div class="row">
+    <div class="box flex1 item-1">flex: 1</div>
+    <div class="box flex2 item-2">flex: 2</div>
+    <div class="box flex1 item-3">flex: 1</div>
+  </div>
+
+</body>
+</html>

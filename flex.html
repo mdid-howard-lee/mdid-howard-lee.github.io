@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- <head> section holds all information about this page -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <title>114 Digital Design</title>
+
+        <!-- This is an "internal css" -->
+        <style>
+            /* margin/padding reset */
+            * { margin:0; padding:0}
+
+            /* global style */
+            html, body {font-family: "Roboto", sans-serif;
+                        font-optical-sizing: auto;
+                        font-weight: 100;
+                        font-style: normal;
+                        font-variation-settings: "wdth" 100;
+            }
+
+            /* header */
+            header { background-color:dodgerblue; padding:10px; box-shadow:0 5px 5px #ccc; position:sticky; top:0;}
+            header .left { text-align:left; width:30%; display:inline-block;}
+            header .right { text-align:right; width:69.7%; display:inline-block;}
+
+            .logo { font-family:"Grenze Gotisch", serif; font-optical-sizing:auto; font-weight:800; font-style:normal;}
+            #header-logo { font-size:22px; background-color:#000; border:5px solid #fff; padding:10px; color:#fff; display:inline-block;}
+            
+            /* nav */
+            .navbar ul { list-style: none; margin: 0; padding: 0; display: flex;}
+            .navbar li { position: relative;}
+            .navbar a { display: block; padding: 10px 15px; text-decoration: none; color:#fff;}
+            .navbar ul > li > ul.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.3); min-width: 150px; text-align:left;}
+            .navbar ul > li > ul > li > a { color:#000;}
+            .dropdown:hover .dropdown-menu { display: block;}
+            .dropdown-menu li a { padding: 8px 12px;}
+
+            /* content */
+            #content { width:1560px; margin:0 auto; padding:30px 0;}
+            #content p { font-size:18px; margin-bottom:30px;}
+            #content hr { margin-bottom:15px;}
+            #content img { width:50%; height:450px; object-fit:cover;}
+
+            /* footer */
+            footer { background-color:#000; padding:30px 10px 0; color:#fff;}
+            footer .title { font-size:22px; font-weight:bold; display:block; margin-bottom:30px;}
+            footer .fullmap { width:100%;}
+            footer #disclaimer { margin-top:30px; padding:8px; background-color:beige; color:#000; text-align:center; font-weight:bold; font-size:12px;}
+
+            /* flex-box explanation */
+            .section-title {
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            }
+
+
+            /* Flex container */
+            .flex-container {
+            display: flex;               /* ★ 啟用 flex */
+            border: 2px dashed #999;
+            padding: 10px;
+            gap: 10px;                   /* 物件之間距離 */
+            margin-bottom:30px;
+            }
+
+            /* Flex items */
+            .box {
+            background: lightgray;
+            padding: 20px;
+            text-align: center;
+            }
+
+            /* 範例2：改變主軸方向 */
+            .column {
+            flex-direction: column;     /* ★ 垂直排列 */
+            height: 200px;
+            }
+
+            /* 範例3：主軸對齊方式 */
+            .justify-center {
+            justify-content: center;    /* ★ 主軸置中 */
+            }
+            .justify-between {
+            justify-content: space-between; /* ★ 等距分配 */
+            }
+
+            /* 範例4：交叉軸對齊方式 */
+            .align-center {
+            align-items: center;        /* ★ 交叉軸置中 */
+            height: 200px;
+            }
+        </style>
+    </head>
+    
+    <!-- This holds all the viewable elements -->
+    <body>
+        <header>
+            <div class="left">
+                <span id="header-logo" class="logo">114 Digital Design</span>
+            </div>
+            <div class="right">
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="dropdown">
+                            <a href="#">Important Technique</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="table.html">Table</a></li>
+                                <li><a href="flex.html">Flex</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="helpful-links.html">Helpful Links</a></li>
+                        <li><a href="common-html-tags.html">Common HTML Tags</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section id="content">
+            <h1>CSS - Display: Flex</h1>
+            <hr />
+            <p>Read this page carefully to understand how to organize elements on a page using flex</p>
+            <h2>Basic Flexbox Examples</h2>
+            <!-- 1. 基本 Flex -->
+            <div class="section-title">1. display: flex</div>
+            <div class="flex-container">
+                <div class="box">A</div>
+                <div class="box">B</div>
+                <div class="box">C</div>
+            </div>
+
+            <!-- 2. flex-direction: column -->
+            <div class="section-title">2. flex-direction: column</div>
+            <div class="flex-container column">
+                <div class="box">A</div>
+                <div class="box">B</div>
+                <div class="box">C</div>
+            </div>
+
+            <!-- 3. justify-content -->
+            <div class="section-title">3. justify-content</div>
+            <div class="flex-container justify-center">
+                <div class="box">A</div>
+                <div class="box">B</div>
+                <div class="box">C</div>
+            </div>
+
+            <div class="flex-container justify-between">
+                <div class="box">A</div>
+                <div class="box">B</div>
+                <div class="box">C</div>
+            </div>
+
+            <!-- 4. align-items -->
+            <div class="section-title">4. align-items</div>
+            <div class="flex-container align-center">
+                <div class="box">A</div>
+                <div class="box">B</div>
+                <div class="box">C</div>
+            </div>
+
+        <hr />
+        <a href="flex-animation.html" target="_blank">Demo</a>
+        
+        </section>
+        
+        <footer>
+            <span class="title">The Magic Journey Begins Here</span>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.9086633859783!2d120.6343395760148!3d24.10470727843035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693c16a2087bc5%3A0x5dad29846ff91db1!2z5piO6YGT5Lit5a245ZyL6Zqb6YOoIE1ESUQgLSBJQuWtuOagoQ!5e0!3m2!1sen!2stw!4v1763343393775!5m2!1sen!2stw" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="fullmap"></iframe>
+            <div id="disclaimer">
+                &copy; 2025 All Content & Information by Howard Lee
+            </div>
+        </footer>
+    </body>
+
+</html>
