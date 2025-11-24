@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <title>G9 Digital Design Testing Hub</title>
+        <title>114 Digital Design</title>
 
         <!-- This is an "internal css" -->
         <style>
@@ -31,8 +31,13 @@
             #header-logo { font-size:22px; background-color:#000; border:5px solid #fff; padding:10px; color:#fff; display:inline-block;}
             
             /* nav */
-            nav { color:#fff;}
-            nav a { display:inline-block; font-weight:bold; margin:0 10px; color:#fff;}
+            .navbar ul { list-style: none; margin: 0; padding: 0; display: flex;}
+            .navbar li { position: relative;}
+            .navbar a { display: block; padding: 10px 15px; text-decoration: none; color:#fff;}
+            .navbar ul > li > ul.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.3); min-width: 150px; text-align:left;}
+            .navbar ul > li > ul > li > a { color:#000;}
+            .dropdown:hover .dropdown-menu { display: block;}
+            .dropdown-menu li a { padding: 8px 12px;}
 
             /* content */
             #content { width:1560px; margin:0 auto; padding:30px 0;}
@@ -52,35 +57,36 @@
     <body>
         <header>
             <div class="left">
-                <span id="header-logo" class="logo">Digital Design 9</span>
+                <span id="header-logo" class="logo">114 Digital Design</span>
             </div>
             <div class="right">
-                <nav>
-                    <a href="default.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="common-html-tags.html">Common HTML Tags</a>
-                    <a href="table.html">Table</a>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="dropdown">
+                            <a href="#">Important Technique</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="table.html">Table</a></li>
+                                <li><a href="flex.html">Flex</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="helpful-links.html">Helpful Links</a></li>
+                        <li><a href="common-html-tags.html">Common HTML Tags</a></li>
+                    </ul>
                 </nav>
             </div>
         </header>
         <section id="content">
-            <h1>G9 Digital Design Testing Hub</h1>
+            <h1>114 Digital Design Information Hub</h1>
             <hr />
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent blandit leo et condimentum commodo. Sed eu augue odio. Donec eu volutpat orci. Nam urna odio, feugiat at dignissim in, aliquet aliquam risus. In quis feugiat est. Sed dolor lorem, bibendum ac enim in, posuere facilisis lacus. Nam non nulla a elit varius maximus. Nulla venenatis accumsan ipsum, a accumsan sapien dignissim ultrices. Morbi tincidunt sit amet lectus nec congue. Vestibulum quis tellus euismod, imperdiet odio et, sodales ligula. Maecenas at consectetur nibh, nec dignissim est. Nam dictum viverra pulvinar. Etiam suscipit velit nec erat gravida pretium. Duis cursus felis eu elit tempus tempor. Suspendisse at bibendum arcu.</p>
-
-            <p>Vivamus vitae urna ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent elit nibh, ullamcorper eu convallis a, euismod a lacus. Quisque aliquam facilisis pulvinar. Morbi eu metus id libero tempus condimentum. Duis convallis ipsum magna, eu dapibus nibh vulputate ac. Morbi quis eros id augue pretium molestie. Praesent fermentum nisi nec sodales egestas.</p>
-
-            <p>Vestibulum et pulvinar tortor. Fusce in tempor odio, at porttitor tortor. Vestibulum ornare porta auctor. Vestibulum fermentum fringilla laoreet. Mauris faucibus non orci at tristique. Donec porttitor purus ultrices nisi scelerisque condimentum. Donec porttitor sollicitudin dignissim. Vivamus fringilla scelerisque dui. Phasellus vel eleifend nulla.</p>
-
-            <p>Sed non lobortis urna. Donec elementum sit amet nisi eu suscipit. Vestibulum semper lorem at ante viverra, ut bibendum dui iaculis. Integer vehicula tristique lorem ut tincidunt. Vestibulum eget sapien at sapien tincidunt porttitor. Morbi placerat augue quis augue egestas semper. Maecenas id congue turpis. Nulla facilisi. Ut et urna rutrum, posuere turpis quis, hendrerit lacus. Ut et tristique nisi, quis scelerisque lectus. Sed mollis augue ut nulla rutrum semper.</p>
-
-            <p>Suspendisse non eros vitae tortor aliquam elementum. Pellentesque non vulputate arcu. Donec euismod mollis augue vitae tristique. Nullam elementum sed risus in mollis. Nullam volutpat justo ac accumsan fringilla. Etiam erat est, fermentum et sapien quis, dictum consequat nisl. Integer facilisis sapien ac justo pretium, vel sagittis leo luctus. Sed sit amet pellentesque ante. Donec pulvinar, tortor eget volutpat egestas, magna elit semper arcu, id tincidunt augue felis tincidunt diam. Aliquam tortor elit, fermentum nec eleifend vel, aliquam eget nunc.</p>
-
-            <img src="images/blackpink.webp" /><img src="images/aespa.webp" />
+            <img src="images/banner.webp" alt="Howard Posing" />
+            <h2>Welcome to 114 Digital Design</h2>
+            <p>Please use this site to find important techniques that will be very useful for your formative and summative assignments</p>
         </section>
         
         <footer>
-            <span class="title">Magic Journey Begins Here</span>
+            <span class="title">The Magic Journey Begins Here</span>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.9086633859783!2d120.6343395760148!3d24.10470727843035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693c16a2087bc5%3A0x5dad29846ff91db1!2z5piO6YGT5Lit5a245ZyL6Zqb6YOoIE1ESUQgLSBJQuWtuOagoQ!5e0!3m2!1sen!2stw!4v1763343393775!5m2!1sen!2stw" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="fullmap"></iframe>
             <div id="disclaimer">
                 &copy; 2025 All Content & Information by Howard Lee
