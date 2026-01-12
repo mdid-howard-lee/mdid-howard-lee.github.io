@@ -21,6 +21,7 @@
             #content aside menu a:last-child { border-bottom-left-radius:15px;}
 
             #content article { background-color:#eee; padding:30px;}
+            #content article section span { margin-bottom:10px; display:block;}
 
             /* style <code> section differently so it stands out */
             pre { background-color:#000; padding:10px; color:greenyellow; box-shadow:1px 1px 10px #ccc; margin:10px 0;}
@@ -50,48 +51,72 @@
                 </aside>
                 <article class="grid-10">
                     <section>
+                        <!-- Primary Commands -->
                         <a name="git-command"></a>
-                        <h2>Git Command You Need to Remember</h2>
+                        <h2>Git Commands You Need to Remember</h2>
                         <hr />
+
                         <pre><code>git init</code></pre>
+                        <h3>What does this do?</h3>
+                        <span>Creates a new Git repository in your project folder so Git can start tracking files.</span>
                         <h3>Possible prompt(s) you may see on the test:</h3>
                         <ul>
                             <li>Initialize git in your summative folder</li>
                             <li>Ensure that Git has been initialized in your folder</li>
                         </ul>
+                        
                         <pre><code>git remote add origin #your-repository-url</code></pre>
+                        <h3>What does this do?</h3>
+                        <span>Connects your local repository to a remote GitHub repository so you can push your work online.</span>
                         <h3>Possible prompt(s) you may see on the test:</h3>
                         <ul style="margin-bottom:5px;">
                             <li>Set up your remote origin with your repository url</li>
                             <li>Add a remote repository url as your origin</li>
                         </ul>
-                        <span style="display:inline-block; margin-bottom:10px;">Click <a href="/images/git-repository.png" target="_blank">here</a> to see how to find your git repository url</span>
+                        <span>Click <a href="/images/git-repository.png" target="_blank">here</a> to see how to find your git repository url</span>
+
+                        <pre><code>git pull</code></pre>
+                        <h3>What does this do?</h3>
+                        <span>Downloads the latest changes from GitHub and updates your local files to match. However, since you will be creating a new site for the summative, you probably will not need to use this command</span>
+                        
                         <pre><code>git add .</code></pre>
+                        <h3>What does this do?</h3>
+                        <span>Stages all changed files so they are ready to be included in the next commit. You can replace "." with actual file names to stage them respectively</span>
                         <h3>Possible prompt(s) you may see on the test:</h3>
                         <ul>
                             <li>Stage all your changes to be ready for commit</li>
                             <li>Stage all the changes you've made to your site</li>
                         </ul>
+                        
                         <pre><code>git commit -m "you can type anything in here"</code></pre>
+                        <h3>What does this do?</h3>
+                        <span>Saves a snapshot of your staged changes with a short description of what you changed.</span>
                         <h3>Possible prompt(s) you may see on the test:</h3>
                         <ul>
                             <li>Commit your staged changes with a custom message</li>
                         </ul>
+                        
                         <pre><code>git push -u origin main</code></pre>
+                        <h3>What does this do?</h3>
+                        <span>Uploads your committed work to GitHub and sets main as the default branch for future pushes.</span>
                         <h3>Possible prompt(s) you may see on the test:</h3>
                         <ul>
                             <li>Push your committed changes while setting up an upstream to your origin's main branch</li>
                             <li>Push your changes now; Remember to set up the upstream if this is the first time</li>
                         </ul>
+
+                        <!-- Useful Git Command -->
                         <h2>Other Useful Git Command</h2>
                         <hr />
                         <pre><code>git remote -v</code></pre>
-                        <span>Use this command to check whether your have successfully set up a connection to your repository; You should see:</span>
+                        <h3>What does this do?</h3>
+                        <span>Shows the remote repository URLs linked to your project (used to check if origin is set correctly). You should see:</span>
                         <pre><code>origin  #your-repository-url (fetch)
 origin  #your-repository-url (push)
 </code></pre>
                         <pre style="margin-top:30px;"><code>git branch -M main</code></pre>
-                        <span>Use this command to create a branch called main</span>
+                        <h3>What does this do?</h3>
+                        <span>Renames the current branch to main, which is the standard default branch name.</span>
                     </section>
                 </article>
             </div>
