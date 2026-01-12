@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- <head> section holds all information about this page -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <title>114 Digital Design | Summative Preparation</title>
+
+        <link href="css/font.css" rel="stylesheet">
+        <link href="css/structure.css" rel="stylesheet">
+        <link href="css/global.css" rel="stylesheet">
+
+        <style>
+            #content aside { position:sticky; top:134px; align-self:start;}
+            #content aside menu a { color:#fff; background-color:burlywood; display:block; text-align:center; font-size:22px; margin-bottom:15px; padding:10px; box-shadow:0px 5px 10px #ccc; transition:0.75s; text-decoration:none;}
+            #content aside menu a:hover { background-color:brown;}
+            #content aside menu a:first-child { border-top-left-radius:15px;}
+            #content aside menu a:last-child { border-bottom-left-radius:15px;}
+
+            #content article { background-color:#eee; padding:30px;}
+
+            /* style <code> section differently so it stands out */
+            pre { background-color:#000; padding:10px; color:greenyellow; box-shadow:1px 1px 10px #ccc; margin:10px 0;}
+            
+        </style>
+    </head>
+    
+    <!-- This holds all the viewable elements -->
+    <body>
+        <!-- Header placeholder -->
+        <header id="header"></header>
+
+        <main>
+            <div id="content" class="grid">
+                <div class="grid-12">
+                    <h1>How to prepare for your summative</h1>
+                </div>
+                <aside class="grid-2">
+                    <menu>
+                        <a href="#git-command">Git Command</a>  
+                        <a href="#">2</a>  
+                        <a href="#">3</a>  
+                        <a href="#">4</a>  
+                        <a href="#">5</a>  
+                        <a href="#">6</a>    
+                    </menu>
+                </aside>
+                <article class="grid-10">
+                    <section>
+                        <a name="git-command"></a>
+                        <h2>Git Command You Need to Remember</h2>
+                        <hr />
+                        <pre><code>git init</code></pre>
+                        <h3>Possible prompt(s) you may see on the test:</h3>
+                        <ul>
+                            <li>Initialize git in your summative folder</li>
+                            <li>Ensure that Git has been initialized in your folder</li>
+                        </ul>
+                        <pre><code>git remote add origin #your-repository-url</code></pre>
+                        <h3>Possible prompt(s) you may see on the test:</h3>
+                        <ul style="margin-bottom:5px;">
+                            <li>Set up your remote origin with your repository url</li>
+                            <li>Add a remote repository url as your origin</li>
+                        </ul>
+                        <span style="display:inline-block; margin-bottom:10px;">Click <a href="/images/git-repository.png" target="_blank">here</a> to see how to find your git repository url</span>
+                        <pre><code>git add .</code></pre>
+                        <h3>Possible prompt(s) you may see on the test:</h3>
+                        <ul>
+                            <li>Stage all your changes to be ready for commit</li>
+                            <li>Stage all the changes you've made to your site</li>
+                        </ul>
+                        <pre><code>git commit -m "you can type anything in here"</code></pre>
+                        <h3>Possible prompt(s) you may see on the test:</h3>
+                        <ul>
+                            <li>Commit your staged changes with a custom message</li>
+                        </ul>
+                        <pre><code>git push -u origin main</code></pre>
+                        <h3>Possible prompt(s) you may see on the test:</h3>
+                        <ul>
+                            <li>Push your committed changes while setting up an upstream to your origin's main branch</li>
+                            <li>Push your changes now; Remember to set up the upstream if this is the first time</li>
+                        </ul>
+                        <h2>Other Useful Git Command</h2>
+                        <hr />
+                        <pre><code>git remote -v</code></pre>
+                        <span>Use this command to check whether your have successfully set up a connection to your repository; You should see:</span>
+                        <pre><code>origin  #your-repository-url (fetch)
+origin  #your-repository-url (push)
+</code></pre>
+                        <pre style="margin-top:30px;"><code>git branch -M main</code></pre>
+                        <span>Use this command to create a branch called main</span>
+                    </section>
+                </article>
+            </div>
+        </main>
+
+        <footer>
+            <span class="title">The Magic Journey Begins Here</span>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.9086633859783!2d120.6343395760148!3d24.10470727843035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693c16a2087bc5%3A0x5dad29846ff91db1!2z5piO6YGT5Lit5a245ZyL6Zqb6YOoIE1ESUQgLSBJQuWtuOagoQ!5e0!3m2!1sen!2stw!4v1763343393775!5m2!1sen!2stw" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="fullmap"></iframe>
+            <div id="disclaimer">
+                &copy; 2025 All Content & Information by Howard Lee
+            </div>
+        </footer>
+
+        <script src="scripts/main.js"></script>
+    </body>
+
+</html>
