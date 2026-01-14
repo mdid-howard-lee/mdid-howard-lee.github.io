@@ -16,12 +16,16 @@
         <style>
             #content aside { position:sticky; top:134px; align-self:start;}
             #content aside menu a { color:#fff; background-color:burlywood; display:block; text-align:center; font-size:22px; margin-bottom:15px; padding:10px; box-shadow:0px 5px 10px #ccc; transition:0.75s; text-decoration:none;}
+            #content aside menu a.active { background-color:brown;}
             #content aside menu a:hover { background-color:brown;}
             #content aside menu a:first-child { border-top-left-radius:15px;}
             #content aside menu a:last-child { border-bottom-left-radius:15px;}
 
             #content article { background-color:#eee; padding:30px;}
+            #content article section { display:none;}
+            #content article section.active { display:block;}
             #content article section span { margin-bottom:10px; display:block;}
+            #content article section span > span { display:inline; color:red;}
 
             /* style <code> section differently so it stands out */
             pre { background-color:#000; padding:10px; color:greenyellow; box-shadow:1px 1px 10px #ccc; margin:10px 0;}
@@ -41,18 +45,17 @@
                 </div>
                 <aside class="grid-2">
                     <menu>
-                        <a href="#git-command">Git Command</a>  
-                        <a href="#">2</a>  
-                        <a href="#">3</a>  
-                        <a href="#">4</a>  
-                        <a href="#">5</a>  
-                        <a href="#">6</a>    
+                        <a href="javascript:void(0);" data-target="1" class="active">Git Command</a>  
+                        <a href="javascript:void(0);" data-target="2">Basic HTML</a>  
+                        <a href="javascript:void(0);" data-target="3">3</a>  
+                        <a href="javascript:void(0);" data-target="4">4</a>  
+                        <a href="javascript:void(0);" data-target="5">5</a>  
+                        <a href="javascript:void(0);" data-target="6">6</a>    
                     </menu>
                 </aside>
                 <article class="grid-10">
-                    <section>
+                    <section id="1" class="active">
                         <!-- Primary Commands -->
-                        <a name="git-command"></a>
                         <h2>Git Commands You Need to Remember</h2>
                         <hr />
 
@@ -118,6 +121,66 @@ origin  #your-repository-url (push)
                         <h3>What does this do?</h3>
                         <span>Renames the current branch to main, which is the standard default branch name.</span>
                     </section>
+                    <section id="2">
+                        <h2>Basic HTML Structure & What Tags to Use</h2>
+                        <hr />
+                        <p>The basic code layout should (always) be:</p>
+                        <pre><code>&lt;html&gt;
+    &lt;head&gt;
+        [Page Information]
+    &lt;/head&gt;
+    &lt;body&gt;
+        [Page Content]
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                        <p>Click <a href="images/example-basic-html-structure.png" target="_blank">here</a> to see a picture example of what &lt;head&gt; &amp; &lt;body&gt; control respectively.</p>
+                        
+                        <h2>What goes inside &lt;head&gt;?</h2>
+                        <p>At this stage, you will only need to include two things in this section</p>
+                        <pre><code>&lt;title&gt#your-site-title&lt;/title&gt;</code></pre>
+                        <h3>What does it do?</h3>
+                        <span>This change the tab text in the browser. Remember, this is NOT the actual title for your content</span>
+                        <pre><code>&lt;link href="css/global.css" rel="stylesheet" /&gt</code></pre>
+                        <h3>What does it do?</h3>
+                        <span>This grabs external stylesheet file from a given file path. Remember, <span>rel="stylesheet"</span> is essential for this to work</span>
+
+                        <h2 style="margin-top:30px;">What goes inside &lt;body&gt;?</h2>
+                        <p>Basically the whole page content is held in this section. You need to learn how to sectionalize the page in order to achieve the layout you want.</p>
+                        <h3>1. To create different parts</h3>
+                        <pre><code>&lt;div&gt;content&lt;/div&gt; - Create a division</code></pre>
+                        <pre><code>&lt;section&gt;content&lt;/section&gt; - Create a section</code></pre>
+                        <pre><code>&lt;header&gt;content&lt;/header&gt; - Create a section that is usually used for logo & menu</code></pre>
+                        <pre><code>&lt;footer&gt;content&lt;/footer&gt; - Create a section that is usually used for contact information, map directions, and secondary links</code></pre>
+                        <pre><code>&lt;main&gt;content&lt;/main&gt; - Create a section that usually holds the main content of the page</code></pre>
+                        <h4>Possible prompts you may see on the test</h4>
+                        <ul>
+                            <li>Create a __________ section</li>
+                            <li>Separate into different parts</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <span>Please create a header and separate into three parts: logo, slogan, and menu</span>
+                        <pre><code>&lt;header&gt;
+    &lt;div id="logo"&gt[logo content]&lt;/div&gt;
+    &lt;div id="slogan"&gt[slogan content]&lt;/div&gt;
+    &lt;div id="menu"&gt[menu content]&lt;/div&gt;
+&lt;/header&gt;</code></pre>
+
+                    <h3 style="margin-top:30px;">2. To create a clickable element that take you to another page</h3>
+                    <pre><code>&lt;a href="[link]"&gt;[element]&lt;/a&gt;</code></pre>
+                    <ul>
+                        <li>[link] can be another page in your folder, so make sure you under file structure; it can also be an actual link (url)</li>
+                        <li>[element] can be any element; such as pure text, or &ltimg&gt;</li>
+                    </ul>
+
+                    <h3 style="margin-top:30px;">3. To display an image</h3>
+                    <pre><code>&lt;img src="[image file path]" /&gt;</code></pre>
+                    <ul>
+                        <li>[image file path] can be an image file in your folder, so make sure you under file structure; it can also be an actual link to an image (url)</li>
+                        <li>Remember, &ltimg&gt; is a self-closing tag, meaning that it doesn't have a closing tag</li>
+                    </ul>
+
+                    </section>
                 </article>
             </div>
         </main>
@@ -132,6 +195,31 @@ origin  #your-repository-url (push)
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="scripts/main.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("menu a").click(function(e){
+                    e.preventDefault();
+
+                    if($(this).hasClass('active')){
+                        return false;
+                    }
+
+                    var selector = $(this).data("target");
+
+                    $("menu a").not(this).removeClass("active");
+                    $(this).toggleClass("active");
+                    
+                    // Remove active class from all <article><section>
+                    $("article section").fadeOut(1000, function(){
+                        $(this).removeClass("active")
+                    })
+                    $("#" + selector).fadeIn(1000, function(){
+                        $(this).addClass("active");
+                    });
+                });
+            });
+        </script>
     </body>
 
 </html>
